@@ -1,12 +1,59 @@
 
-\newcommand{\cardA}{
-  \cardsoc{Chacun}{À chacun son tour, \bonusA{} un joueur place une  cartes de son choix de sa main à ce qu'il pense être sa bonne position dans la frise.\\
-    Une fois posée, la carte est retournée : si \malusA{} elle est en bonne position, la carte est laissée face visible pour compléter la frise, sinon, la carte est défaussée et le joueur en tire une nouvelle.\\
-    Le premier joueur a avoir placé correctement toutes ses cartes est déclaré vainqueur. Si la pioche est épuisée alors qu'un joueur doit tirer à nouveau, il est déclaré perdant.}
+\newcommand{\cardsoc}[3]{
+  \fullcard{#1}{red}{Gleichmacherei}{#2}{#3}
 }
 
-\newcommand{\cardB}{
-  \cardlib{Chacun}{À chacun son tour, un joueur place une  cartes de son choix de sa main à ce qu'il pense être sa bonne position dans la frise.\\
-    Une fois posée, la carte est retournée : si elle est en bonne position, la carte est laissée face visible pour compléter la frise, sinon, la carte est défaussée et le joueur en tire une nouvelle.\\
-    Le premier joueur a avoir placé correctement toutes ses cartes est déclaré vainqueur. Si la pioche est épuisée alors qu'un joueur doit tirer à nouveau, il est déclaré perdant.}
+\newcommand{\cardlib}[3]{
+  \fullcard{#1}{black}{Ungleichmacherei}{#2}{#3}
+}
+
+\newcommand{\cardMedianBonMal}[3]{
+  \cardlib{#1}{Alle echt oberhalb des \status{}-Medians bekommen {#2} und alle echt unterhalb dessen bekommen {#3}.}{total geordneter \status{}}
+}
+
+\newcommand{\cardMedianMalBon}[3]{
+  \cardsoc{#1}{Alle echt oberhalb des \status{}-Medians bekommen {#2} und alle echt unterhalb dessen bekommen {#3}.}{total geordneter \status{}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% THIS is the DECK
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\cardA}{\cardMedianBonMal{Horse-Sparrow-E. A}{\bonusA{}}{\malusA}}
+
+\newcommand{\cardB}{\cardMedianBonMal{Horse-Sparrow-E. B}{\bonusB{}}{\malusB}}
+
+\newcommand{\cardC}{\cardMedianMalBon{Umverteilung A}{\malusA{}}{\bonusA{}}}
+
+\newcommand{\cardD}{\cardMedianMalBon{Umverteilung B}{\malusB{}}{\bonusB{}}}
+
+\newcommand{\cardE}{
+  \cardlib{Lobbyistendinner}{Alle echt oberhalb des \status{}-Medians dürfen sich auf eine Karte einigen, die ausgespielt wird.}{total geordneter \status{}}
+}
+
+\newcommand{\cardF}{
+  \cardsoc{Graswurzelbew.}{Alle echt unterhalb des \status{}-Medians dürfen sich auf eine Karte einigen. Wenn sich auch die Mehrheit derer echt oberhalb dessen sich dafür ausspricht, wird sie ausgespielt.}{total geordneter \status{}}
+}
+
+\newcommand{\cardG}{
+  \cardsoc{Kommunismus}{Alles \kapital{} wird eingesammelt und gleichmäßig wieder aufgeteilt.}{faire \kapital{}-Veteilung}
+}
+
+\newcommand{\cardH}{
+  \cardsoc{Staatseigentum}{Alles \kapital{} wird eingesammelt und offen in die Mitte gelegt. Jede Nutzung wird muss im Plenum abgestimmt werden. Diese Karte bleibt liegen bis \textit{Privateigentum} gespielt wird.}{\kapital{}}
+}
+
+\newcommand{\cardI}{
+  \cardlib{Privateigentum}{Löst \textit{Staatseigentum} auf. Das gemeinschaftliche \kapital{} wird fair wieder aufgeteilt.}{faire \kapital{} Verteilung}
+}
+
+\newcommand{\cardJ}{
+  \cardsoc{Revolution}{Jede Person tauscht mit der ihr in der \status{}-Rangliste diametral gegenüber stehenden Person den Platz und den gesamten Spielzustand (also auch Spielfigur, Karten, Punktestand,~...)}{total geordneter \status{}}
+}
+
+\newcommand{\cardK}{
+  \cardsoc{Vollversammlung}{Gemeinsam wird eine Person beschlossen, die \malusA{} bekommnt und eine die \bonusA{} bekommt.}{$\geq$ 3 Spieler}
+}
+
+\newcommand{\cardL}{
+  \cardlib{Oligarchie}{Alle legen alles Kapital in die Mitte. Danach wird das Kapital fair unter allen echt oberhalb des \status{}-Medians wieder aufgeteilt. (Wenn niemand echt oberhalb des Medians ist, wird es unter allen fair aufgeteilt.}{\footnotesize total geordneter \status{},\\\footnotesize faire \kapital{} Verteilung}
 }

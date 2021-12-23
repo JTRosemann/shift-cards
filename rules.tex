@@ -1,0 +1,41 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\pagestyle{empty}
+
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+
+\input{./style}
+
+\title{Umverteilung -- die Erweiterung für jedes Spiel}
+\date{}
+\begin{document}
+\maketitle
+\large
+So funktioniert es:
+Als erstes wird gemeinsam die umseitige Tabelle ausgefülllt.
+In das Feld \othe{Trigger} wird eingetragen, wann eine Umverteilungs-Karte gespielt wird.
+Das kann zum Beispiel alle paar Runden passieren oder wenn im Spiel eine bestimmte Situation auftritt.
+\bonusA{}, \malusA{}, etc. geben die Effekte an, die einmalig ausgeführt werden, wenn sie auf einer ausgespielten Karte beschrieben sind.
+Bei \status{} wird das Erfolgsmaß definiert, welches entscheidet wer welchen Effekt erfährt.
+Manche Karten verlangen, dass der \status{} eine Totalordnung induziert.
+Ist dies nicht der Fall, müssen diese Karten aus dem Spiel genommen werden.
+Manche Karten verlangen zusätzlich auch eine Definition für \kapital{} oder \kapital{}-Verteilung.
+Diese kann nun auch angegeben werden.
+Das können zum Beispiel Handkarten oder Spielgeld sein.
+
+Nun werden die Karten ausgesucht mit denen gespielt werden soll.
+Dabei ist darauf zu achten, dass die Vorraussetzungen unten in dem gelben Feld erfüllt sind.
+
+Die Karten werden gemischt und als verdeckter Stapel auf den Tisch gelegt.
+Immer wenn der Trigger ausgelöst wird eine Umverteilungs-Karte vom Stapel ausgespielt und der Effekt ausgeführt.
+
+Das Spiel kann jederzeit um weitere Karten erweitert werden.
+
+\end{document}

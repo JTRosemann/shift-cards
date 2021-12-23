@@ -144,16 +144,16 @@
 }
 
 %% Maincontent, written at the back: date (arg #1) and description (arg #2)
-\newcommand{\cardcontent}[2]{
+\newcommand{\cardcontent}[3]{
   \begin{scope}[even odd rule]
     \clip \shapeBackground;
     \fill[elementcorners,contentbg,opacity=.5] \shapeContentArea;
   \end{scope}
   \node[below right, align=justify, text width=(\imagewidth-2*\strippadding-\stripwidth-2*\textpadding)*1cm] (cont) at (\borderwidth+2*\strippadding+\stripwidth+0*\textpadding,\cardheight-\textpadding-\borderwidth) {
-    \centerline{\bf\Large #1}\\%
-    {\footnotesize #2}
+    \centerline{\bf\Large #1}\\[1ex]%
+    { #2}
   };
-  \node[above right, align=justify, draw, fill=yellow!20, rectangle, minimum height=6ex, minimum width=(\cardwidth-\stripwidth-2*\strippadding-2*\borderwidth)*1cm] (req) at (\borderwidth+2*\strippadding+\stripwidth+0*\textpadding,\textpadding+\borderwidth) {TEST};
+  \node[above right, align=justify, draw, fill=yellow!20, rectangle, minimum height=6ex, minimum width=(\cardwidth-\stripwidth-2*\strippadding-2*\borderwidth)*1cm] (req) at (\borderwidth+2*\strippadding+\stripwidth+0*\textpadding,\textpadding+\borderwidth) {#3};
 }
 
 %% Print vertical credits (arg #2) on a side (front). Text color (arg #1) is white by default
@@ -175,18 +175,10 @@
 \newcommand{\cardtypeMan}{\cardtype{manbg}{{Personnalité}}}
 \newcommand{\cardtypeUniv}{\cardtype{univbg}{{Institution}}}
 
-\newcommand{\fullcard}[4]{
+\newcommand{\fullcard}[5]{
   \begin{tikzpicture}
     \cardborder
     \cardtype{#2}{#3}
-    \cardcontent{#1}{#4}
+    \cardcontent{#1}{#4}{#5}
   \end{tikzpicture}
-}
-
-\newcommand{\cardsoc}[2]{
-  \fullcard{#1}{red}{Sozialistisch}{#2}
-}
-
-\newcommand{\cardlib}[2]{
-  \fullcard{#1}{yellow}{Neoliberal}{#2}
 }

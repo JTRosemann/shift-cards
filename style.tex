@@ -1,5 +1,54 @@
 
-\newcommand{\bonusA}{\textcolor{green}{Bonus A}}
-\newcommand{\bonusB}{\textcolor{blue}{Bonus B}}
-\newcommand{\malusA}{\textcolor{pink}{Malus A}}
-\newcommand{\malusB}{\textcolor{orange}{Malus B}}
+\IfStrEqCase{ninja}{
+  {cool}{
+    \definecolor{bone}{HTML}{104210}
+    \definecolor{btwo}{HTML}{7A871E}
+    \definecolor{mone}{HTML}{E55B13}
+    \definecolor{mtwo}{HTML}{F6A21E}
+  }
+  {christmas}{%https://www.color-hex.com/color-palette/1006651
+    \definecolor{bone}{HTML}{274e13}
+    \definecolor{btwo}{HTML}{08a217}
+    \definecolor{mone}{HTML}{990000}
+    \definecolor{mtwo}{HTML}{cc0000}
+    \definecolor{othe}{HTML}{eeeeee}
+  }
+  {ninja}{%https://www.color-hex.com/color-palette/1006625
+    \definecolor{bone}{HTML}{3d85c6}
+    \definecolor{btwo}{HTML}{6a329f}
+    \definecolor{mone}{HTML}{cc0000}
+    \definecolor{mtwo}{HTML}{ce7e00}
+    \definecolor{othe}{HTML}{38761e}
+  }
+  {summer}{%https://www.color-hex.com/color-palette/1006598
+    \definecolor{bone}{HTML}{1b998b}
+    \definecolor{btwo}{HTML}{c5d86b}
+    \definecolor{mone}{HTML}{d7262d}
+    \definecolor{mtwo}{HTML}{f46036}
+    \definecolor{othe}{HTML}{2e294e}
+  }
+  {fox}{%https://www.color-hex.com/color-palette/1006762
+    \definecolor{bone}{HTML}{274e13}
+    \definecolor{btwo}{HTML}{066052}
+    \definecolor{mone}{HTML}{990000}
+    \definecolor{mtwo}{HTML}{ef2828}
+    \definecolor{othe}{HTML}{b6d7a8}
+  }
+  {oui}{%https://www.color-hex.com/color-palette/1006585
+    \definecolor{bone}{HTML}{164b70}
+    \definecolor{btwo}{HTML}{12598b}
+    \definecolor{mone}{HTML}{851414}
+    \definecolor{mtwo}{HTML}{a84a4a}
+    \definecolor{othe}{HTML}{d5e2eb}
+  }
+}
+
+\newcommand{\bonusA}{\textcolor{bone}{\textbf{Bonus~A}}}
+\newcommand{\bonusB}{\textcolor{btwo}{\textbf{Bonus~B}}}
+\newcommand{\malusA}{\textcolor{mone}{\textbf{Malus~A}}}
+\newcommand{\malusB}{\textcolor{mtwo}{\textbf{Malus~B}}}
+
+\newcommand{\othe}[1]{\textcolor{othe}{\textbf{#1}}}
+
+\newcommand{\kapital}{\othe{Kapital}}
+\newcommand{\status}{\othe{Status}}

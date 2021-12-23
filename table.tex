@@ -1,0 +1,43 @@
+\documentclass[a4paper,landscape]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\pagestyle{empty}
+
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+
+\input{./style}
+
+\geometry{hmargin=5mm, vmargin=10mm}
+
+\newcommand{\twid}{4cm}
+\renewcommand{\arraystretch}{2}
+
+\newcommand{\trow}[2]{
+  #1 & {\normalsize #2} & & & & \\
+  \midrule
+}
+
+\begin{document}
+\huge
+\begin{tabular}{l|m{\twid}|m{\twid}|m{\twid}|m{\twid}|m{\twid}|m{\twid}|m{\twid}|m{\twid}|}
+  \trow{}{Bsp.: Dixit}
+  \trow{\bonusA}{2 Punkte vor}
+  \trow{\bonusB}{Darf zwei Tipps abgeben}
+  \trow{\malusA}{2 Punkte Abzug}
+  \trow{\malusB}{Darf nicht mittippen}
+  \trow{\status}{Punktezahl}
+  \trow{\kapital}{Handkarten}
+  \trow{\othe{K. verteilen}}{mischen, austeilen}
+  \trow{\othe{Trigger}}{wenn alle falsch liegen}
+\end{tabular}
+\end{document}
