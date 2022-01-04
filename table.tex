@@ -11,10 +11,6 @@
 \usepackage{array}
 \usepackage{geometry}
 
-\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
-\newcolumntype{N}{@{}m{0pt}@{}}
-
-
 \input{./style}
 
 \geometry{hmargin=5mm, vmargin=10mm}
@@ -31,13 +27,13 @@
 \huge
 \begin{tabular}{l|m{\twid}|m{\twid}|m{\twid}|m{\twid}|m{\twid}|m{\twid}|m{\twid}|m{\twid}|}
   \trow{}{Bsp.: Dixit}
+  \trow{\textbf{Trigger}}{wenn alle falsch liegen}
   \trow{\bonusA}{2 Punkte vor}
   \trow{\bonusB}{Darf zwei Tipps abgeben}
   \trow{\malusA}{2 Punkte Abzug}
   \trow{\malusB}{Darf nicht mittippen}
   \trow{\status}{Punktezahl}
   \trow{\kapital}{Handkarten}
-  \trow{\othe{K. verteilen}}{mischen, austeilen}
-  \trow{\othe{Trigger}}{wenn alle falsch liegen}
+  \trow{\textit{\othe{K. verteilen}}}{mischen, austeilen}
 \end{tabular}
 \end{document}

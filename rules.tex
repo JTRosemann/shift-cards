@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \pagestyle{empty}
+\pagenumbering{gobble}
 
 \usepackage{xstring}
 \usepackage{xcolor}
@@ -13,14 +14,14 @@
 
 \input{./style}
 
-\title{Umverteilung -- die Erweiterung für jedes Spiel}
+\title{Umverteilung -- die revolutionäre Erweiterung}
 \date{}
 \begin{document}
 \maketitle
 \large
 So funktioniert es:
 Als erstes wird gemeinsam die umseitige Tabelle ausgefülllt.
-In das Feld \othe{Trigger} wird eingetragen, wann eine Umverteilungs-Karte gespielt wird.
+In das Feld \textbf{Trigger} wird eingetragen, wann eine Umverteilungs-Karte gespielt wird.
 Das kann zum Beispiel alle paar Runden passieren oder wenn im Spiel eine bestimmte Situation auftritt.
 \bonusA{}, \malusA{}, etc. geben die Effekte an, die einmalig ausgeführt werden, wenn sie auf einer ausgespielten Karte beschrieben sind.
 Bei \status{} wird das Erfolgsmaß definiert, welches entscheidet wer welchen Effekt erfährt.
@@ -36,6 +37,8 @@ Dabei ist darauf zu achten, dass die Vorraussetzungen unten in dem gelben Feld e
 Die Karten werden gemischt und als verdeckter Stapel auf den Tisch gelegt.
 Immer wenn der Trigger ausgelöst wird eine Umverteilungs-Karte vom Stapel ausgespielt und der Effekt ausgeführt.
 
-Das Spiel kann jederzeit um weitere Karten erweitert werden.
+Das Spiel kann jederzeit um weitere Karten erweitert werden:
+Der Quellcode ist hier zu finden:
+\[\texttt{https://github.com/JTRosemann/shift-cards/}\]
 
 \end{document}
